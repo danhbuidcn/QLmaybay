@@ -1,0 +1,68 @@
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Students</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="form_localstorage.css">
+</head>
+
+<body>
+    <form>
+        <h3>Imformation Students</h3>
+        <table id="input">
+            <tr>
+                <td>MSV</td>
+                <td><input type="text" id="msv"></td>
+            </tr>
+            <tr>
+                <td>Tên SV</td>
+                <td><input type="text" id="tenSv"></td>
+            </tr>
+            <tr>
+                <td>Ngày sinh</td>
+                <td><input type="date" id="ngaySinh"></td>
+            </tr>
+            <tr>
+                <td>Quê Quán</td>
+                <td><input type="text" id="que"></td>
+            </tr>
+            <tr>
+                <td>Thời gian</td>
+                <td>
+                    <p id="clock"></p>
+                </td>
+            </tr>
+            <tr>
+                <td colspan="2">
+                    <button type="button" class="btn btn-primary mt-2" onclick="addNew()">Thêm </button>
+                    <button type="button" class="btn btn-primary mt-2" onclick="update()">Cập Nhật </button>
+                    <button type="button" class="btn btn-primary mt-2" onclick="deleteItem()">Xóa</button>
+                </td>
+            </tr>
+        </table>
+    </form>
+    <!-- update,delete chỉ thực hiện được khi mã sinh viên đã tồn tại -->
+    <!-- không thể thay đổi mã sinh viên mà chỉ có thể xóa hoặc thêm mới -->
+    <table id="output" border="1">
+        <thead>
+            <tr>
+                <th>MSV</th>
+                <th>Tên SV</th>
+                <th>Ngày sinh</th>
+                <th>Quê quán</th>
+                <th>Thời gian </th>
+            </tr>
+        </thead>
+        <tbody id="outputList"></tbody>
+    </table>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+    <script src="form_localstorage.js"></script>
+</body>
+
+</html>

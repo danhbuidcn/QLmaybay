@@ -1,0 +1,38 @@
+body {
+    margin: 0 auto;
+    background-color: rgb(14, 153, 218);
+}
+
+form {
+    text-align: center;
+    width: 40%;
+    border: 1px solid white;
+    border-radius: 50px 50px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: rgb(245, 236, 236);
+}
+
+#input {
+    text-align: center;
+    margin: 0 auto;
+}
+
+input {
+    width: 100%;
+}
+
+#output {
+    background-color: wheat;
+    margin: 0 auto;
+    margin-top: 30px;
+}
+
+#output th,
+td {
+    padding: 10px;
+}
+
+#msg {
+    color: red;
+}
