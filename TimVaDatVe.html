@@ -1,0 +1,179 @@
+<html>
+<header></header>
+
+<body>
+    <style>
+        body {
+            width: 100%;
+            margin: 0 auto;
+            padding: 0;
+        }
+        
+        #container {
+            background-color: #1288c1;
+            padding: 10px;
+            margin: 0 auto;
+        }
+        
+        h2 {
+            text-align: center;
+            color: white;
+        }
+        
+        table {
+            background-color: #FFFFFF;
+            color: #1288c1;
+            margin: 0 auto;
+            width: 100%;
+        }
+        
+        th {
+            font-size: 20px;
+        }
+        
+        td {
+            width: 32%;
+			padding: 10px;
+        }
+        
+        #subtb {
+            font-size: 20px;
+        }
+        
+        #subtb span {
+            color: blue;
+        }
+        
+        #subtb button {
+            font-weight: 700;
+            font-size: 20px;
+            padding: 5px;
+            background-color: yellow;
+            border: 1px solid yellow;
+        }
+        
+        #enText {
+            border: none;
+            width: 90%;
+            padding: 10px;
+        }
+        
+        #submit {
+            text-align: center;
+            background-color: orange;
+            margin: 0 auto;
+            font-size: 20px;
+            font-weight: 700;
+            padding: 10px;
+            color: #fff;
+            width: 90%;
+            background-color: f36f21;
+            border: 1px solid gray;
+            border-radius: 10px 10px;
+        }
+    </style>
+    <div id="container">
+        <h2>TÌM & ĐẶT VÉ MÁY BAY​</h2>
+        <form action="#" method="POST">
+            <table cellpadding="10">
+                <tr>
+                    <th>1.CHỌN HÀNH TRÌNH</th>
+                    <th>2.CHỌN NGÀY BAY</th>
+                    <th>3.CHỌN HÀNH KHÁCH</th>
+                </tr>
+                <tr>
+                    <td>
+                        <span style="font-size:20px;color:blue;">Điểm đi</span><br>
+                        <input type="text" placeholder="điểm đi" id="enText" name="diemDi"><br>
+                        <span style="font-size:20px;color:blue;">Điểm đến</span><br>
+                        <input type="text" placeholder="điểm đến" id="enText" name="diemDen"><br>
+                    </td>
+                    <td>
+                        <span style="font-size:20px;color:blue;">Ngày đi</span><br>
+                        <input type="date" id="enText" name="ngayDi"><br>
+                        <span style="font-size:20px;color:blue;margin-right:10px">Ngày về</span>
+                        <span style="font-size:20px;color:blue;">Một chiều</span>
+                        <input type="radio" name="motChieu">
+                        <span style="font-size:20px;color:blue;">Khứ hồi</span>
+                        <input type="radio" name="motChieu">
+                        <input type="date" id="enText" name="ngayVe"><br>
+                    </td>
+                    <td>
+                        <span style="font-size:20px;color:blue">Số lượng hành khách</span><br>
+                        <table id="subtb" cellpadding="10">
+                            <tr>
+                                <td id="one">
+                                    <p>Người lớn</p>
+                                    <input type="button" value="-" onclick="btn0()">
+                                    <span id="lon">1</span><input type="hidden" id="ngLon" value="1" name="ngLon">
+                                    <input type="button" value="+" onclick="btn1()">
+                                </td>
+                                <td id="two">
+                                    <p>Trẻ em</p>
+                                    <input type="button" value="-" onclick="btn2()">
+                                    <span id="em">1</span><input type="hidden" id="treEm" value="1" name="treEm">
+                                    <input type="button" value="+" onclick="btn3()">
+                                </td>
+                                <td id="three">
+                                    <p>Em bé</p>
+                                    <input type="button" value="-" onclick="btn4()">
+                                    <span id="be">1</span><input type="hidden" id="emBe" value="1" name="emBe">
+                                    <input type="button" value="+" onclick="btn5()">
+                                </td>
+                            </tr>
+                        </table>
+                        <input id="submit" type="submit" value="Tìm chuyến bay">
+                    </td>
+                </tr>
+            </table>
+        </form>
+        <script>
+            var lon = parseInt(document.getElementById("lon").textContent);
+
+            var em = parseInt(document.getElementById("em").textContent);
+
+            var be = parseInt(document.getElementById("be").textContent);
+
+            function btn0() {
+                lon--;
+                lon < 0 ? lon = 0 : lon;
+                document.getElementById("lon").innerHTML = lon;
+                document.getElementById("ngLon").value = lon;
+            };
+
+            function btn1() {
+                lon++;
+                document.getElementById("lon").innerHTML = lon;
+                document.getElementById("ngLon").value = lon;
+            };
+
+            function btn2() {
+                em--;
+                em < 0 ? em = 0 : em;
+                document.getElementById("em").innerHTML = em;
+                document.getElementById("treEm").value = em;
+            };
+
+            function btn3() {
+                em++;
+                document.getElementById("em").innerHTML = em;
+                document.getElementById("treEm").value = em;
+            };
+
+            function btn4() {
+                be--;
+                be < 0 ? be = 0 : be;
+                document.getElementById("be").innerHTML = be;
+                document.getElementById("emBe").value = be;
+            };
+
+            function btn5() {
+                be++;
+                document.getElementById("be").innerHTML = be;
+                document.getElementById("emBe").value = be;
+            };
+        </script>
+    </div>
+</body>
+
+</html>
